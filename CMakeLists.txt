@@ -43,8 +43,10 @@ else()
     add_definitions(-D_WEBSOCKETPP_CPP11_CHRONO_)
 endif()
 
-set(CMAKE_CXX_FLAGS_DEBUG "-O0 ${CMAKE_CXX_FLAGS_DEBUG}")
-set(CMAKE_C_FLAGS_DEBUG "-O0 ${CMAKE_C_FLAGS_DEBUG}")
+if (NOT MSVC)
+    set(CMAKE_CXX_FLAGS_DEBUG "-O0 ${CMAKE_CXX_FLAGS_DEBUG}")
+    set(CMAKE_C_FLAGS_DEBUG "-O0 ${CMAKE_C_FLAGS_DEBUG}")
+endif()
 
 set(CMAKE_MODULE_PATH
     ${CMAKE_MODULE_PATH}
@@ -59,7 +61,6 @@ else()
 endif()
 
 if(WIN32)
-    add_definitions(-D_WIN32_WINNT=0x0500)
     add_definitions(-DWIN32_LEAN_AND_MEAN)
 endif()
 
@@ -77,7 +78,7 @@ include_directories(
 
 link_directories(${CMAKE_INSTALL_PREFIX}/lib)
 
-add_subdirectory(examples)
+add_subdirectory(examples EXCLUDE_FROM_ALL)
 add_subdirectory(src)
-add_subdirectory(daemon)
-add_subdirectory(test)
+add_subdirectory(daemon EXCLUDE_FROM_ALL)
+add_subdirectory(test EXCLUDE_FROM_ALL)
