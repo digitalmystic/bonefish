@@ -71,9 +71,7 @@ include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/src
     ${CMAKE_CURRENT_SOURCE_DIR}/third-party/cppcodec
     ${CMAKE_CURRENT_SOURCE_DIR}/third-party/json-msgpack/include
-    ${CMAKE_CURRENT_SOURCE_DIR}/third-party/msgpack-c/include
     ${CMAKE_CURRENT_SOURCE_DIR}/third-party/rapidjson/include
-    ${CMAKE_CURRENT_SOURCE_DIR}/third-party/websocketpp
     ${Boost_INCLUDE_DIRS}
 )
 
