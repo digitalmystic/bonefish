@@ -68,12 +68,12 @@ find_package(RT)
 find_package(Threads)
 
 include_directories(
-    ${CMAKE_SOURCE_DIR}/src
-    ${CMAKE_SOURCE_DIR}/third-party/cppcodec
-    ${CMAKE_SOURCE_DIR}/third-party/json-msgpack/include
-    ${CMAKE_SOURCE_DIR}/third-party/msgpack-c/include
-    ${CMAKE_SOURCE_DIR}/third-party/rapidjson/include
-    ${CMAKE_SOURCE_DIR}/third-party/websocketpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/src
+    ${CMAKE_CURRENT_SOURCE_DIR}/third-party/cppcodec
+    ${CMAKE_CURRENT_SOURCE_DIR}/third-party/json-msgpack/include
+    ${CMAKE_CURRENT_SOURCE_DIR}/third-party/msgpack-c/include
+    ${CMAKE_CURRENT_SOURCE_DIR}/third-party/rapidjson/include
+    ${CMAKE_CURRENT_SOURCE_DIR}/third-party/websocketpp
     ${Boost_INCLUDE_DIRS}
 )
 
