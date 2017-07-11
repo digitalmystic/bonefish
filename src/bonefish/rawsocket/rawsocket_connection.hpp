@@ -20,7 +20,12 @@
 #include <bonefish/common/wamp_connection_base.hpp>
 #include <bonefish/trace/trace.hpp>
 
+#ifdef _WIN32
+#include <WinSock2.h>
+#else
 #include <arpa/inet.h>
+#endif
+
 #include <boost/asio/buffer.hpp>
 #include <boost/asio/error.hpp>
 #include <boost/system/error_code.hpp>
