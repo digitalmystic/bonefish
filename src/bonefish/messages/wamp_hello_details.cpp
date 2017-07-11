@@ -29,7 +29,7 @@ msgpack::object wamp_hello_details::marshal(msgpack::zone& zone) const
 void wamp_hello_details::unmarshal(const msgpack::object& object)
 {
     std::unordered_map<std::string, msgpack::object> details;
-    object.convert(&details);
+    object.convert(details);
 
     auto details_itr = details.find("roles");
     if (details_itr == details.end()) {

@@ -177,7 +177,7 @@ wamp_message* json_serializer::deserialize(const char* buffer, size_t length) co
     }
 
     std::vector<msgpack::object> fields;
-    item.convert(&fields);
+    item.convert(fields);
 
     wamp_message_type type = static_cast<wamp_message_type>(fields[0].as<unsigned>());
     std::unique_ptr<wamp_message> message(wamp_message_factory::create_message(type));

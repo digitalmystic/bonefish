@@ -42,7 +42,7 @@ wamp_message* msgpack_serializer::deserialize(const char* buffer, size_t length)
     msgpack::unpacked item = msgpack::unpack(buffer, length, msgpack::reference_func);
 
     std::vector<msgpack::object> fields;
-    item.get().convert(&fields);
+    item.get().convert(fields);
 
     if (fields.size() < 1) {
         throw std::runtime_error("deserialization failed for message");
