@@ -61,7 +61,10 @@ else()
 endif()
 
 if(WIN32)
-    add_definitions(-DWIN32_LEAN_AND_MEAN)
+    add_definitions (/DNTDDI_VERSION=0x06010000)
+    add_definitions (/D_WIN32_WINNT=0x0601)
+    add_definitions (/DWINVER=0x0601)
+    add_definitions (/DWIN32_LEAN_AND_MEAN)
 endif()
 
 find_package(Boost REQUIRED COMPONENTS ${BOOST_COMPONENTS})
