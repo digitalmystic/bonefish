@@ -28,11 +28,7 @@ set(SOURCES
     bonefish/serialization/msgpack_serializer.cpp
     bonefish/session/wamp_session_state.cpp
     bonefish/trace/trace.cpp
-    bonefish/utility/wamp_uri.cpp
-    bonefish/websocket/websocket_protocol.cpp
-    bonefish/websocket/websocket_server.cpp
-    bonefish/websocket/websocket_server_impl.cpp
-    bonefish/websocket/websocket_transport.cpp)
+    bonefish/utility/wamp_uri.cpp)
 
 set(PUBLIC_HEADERS
     bonefish/native/native_connector.hpp
@@ -51,8 +47,7 @@ set(PUBLIC_HEADERS
     bonefish/serialization/wamp_serializer_type.hpp
     bonefish/serialization/wamp_serializer.hpp
     bonefish/serialization/wamp_serializers.hpp
-    bonefish/trace/trace.hpp
-    bonefish/websocket/websocket_server.hpp)
+    bonefish/trace/trace.hpp)
 
 set(PRIVATE_HEADERS
     bonefish/broker/wamp_broker.hpp

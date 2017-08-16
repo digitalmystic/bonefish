@@ -21,14 +21,11 @@
 #include <bonefish/roles/wamp_role.hpp>
 #include <bonefish/session/wamp_session_state.hpp>
 #include <bonefish/transport/wamp_transport.hpp>
-#include <bonefish/websocket/websocket_config.hpp>
 
 #include <memory>
 #include <ostream>
 #include <string>
 #include <unordered_set>
-#include <websocketpp/common/connection_hdl.hpp>
-#include <websocketpp/server.hpp>
 
 namespace bonefish {
 

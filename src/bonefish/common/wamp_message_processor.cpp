@@ -35,6 +35,7 @@
 #include <bonefish/session/wamp_session.hpp>
 #include <bonefish/trace/trace.hpp>
 #include <bonefish/transport/wamp_transport.hpp>
+#include <bonefish/common/wamp_connection_base.hpp>
 
 namespace bonefish {
 
