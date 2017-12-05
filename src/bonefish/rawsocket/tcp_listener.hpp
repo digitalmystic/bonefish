@@ -41,6 +41,11 @@ public:
     virtual void stop_listening() override;
     virtual std::shared_ptr<rawsocket_connection> create_connection() override;
 
+    auto&
+    acceptor() {
+        return m_acceptor;
+    }
+
 protected:
     virtual void async_accept() override;
 
